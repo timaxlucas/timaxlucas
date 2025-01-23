@@ -12,8 +12,8 @@
 
 				.box svg {
 					display: block;
-					width: 341px;
-					height: 362px;
+					width: 350px;
+					height: 350px;
 					position: absolute;
 					-webkit-animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
 					-moz-animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
@@ -21,9 +21,19 @@
 					animation: moveX 4s linear 0s infinite alternate, moveY 6.8s linear 0s infinite alternate;
 				}
 
-				.box svg:hover {
-					animation-play-state: paused;
-					transform: scale(1.1);
+				@media screen and (max-width: 480px) {
+					.box{
+						background-color: #0d1116;
+						width: 720px;
+						height: 405px;
+						position: relative;
+						overflow: hidden;
+					}
+
+					.box svg {
+						width: 100px;
+						height: 100px;
+					}
 				}
 
 				@-webkit-keyframes moveX {
